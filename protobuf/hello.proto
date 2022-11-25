@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package hello; //指明当前包名
+option go_package="github.com/xiaoweize/rpc/protobuf"; //要生成的go语言包路径
+
+message String {
+    string value = 1;
+}
+
+// 将hello.proto生成当前目录下的hello.pb.go
+// protoc -I=. --go_out=. --go_opt=module="github.com/xiaoweize/rpc/protobuf" hello.proto
+//将当前目录下所有proto扩展名生成对应go文件
+//protoc -I=. --go_out=. --go_opt=module="github.com/xiaoweize/rpc/protobuf" *.proto
