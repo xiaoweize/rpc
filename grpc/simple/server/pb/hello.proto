@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package service;
+option go_package="github.com/xiaoweize/rpc/grpc/simple/server/pb";
+
+message Request {
+    string value = 1;
+}
+
+message Response {
+    string value = 1;
+}
+
+service HelloService {
+    rpc hello (Request) returns (Response);
+}
