@@ -1,13 +1,13 @@
 syntax = "proto3";
 
-package service;
+package hello;
 option go_package="github.com/xiaoweize/rpc/grpc/simple/server/pb";
 
 message Request {
     string value = 1;
 }
 
-message Response {
+message Response{
     string value = 1;
 }
 
